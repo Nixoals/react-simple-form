@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+body{
+    font-family: sans-serif;
+    box-sizing: content-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1{
+    font-weight: bold;
+    font-size: 28px;
+}
+.form-wrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 300px;
+    gap: 10px;
+    box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+form input{
+    width: 100%;
+    height: 40px;
+    background-color: #FCF9F9;
+    border: solid 1px #D3D3D3;
+    border-radius: 6px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
 }
 
-.App-link {
-  color: #61dafb;
+.form button{
+    width: 100%;
+    background-color: #574DCC;
+    border: none;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result-form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: auto;
+    max-width: 300px;
 }
+
+.result-form-container button{
+    max-width: 260%;
+    background-color: #574DCC;
+    border: none;
+    color: white;
+    min-height: 40px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.result-form-container .result-form-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+    width: 220px;
+    background-color: #F2F2F2;
+    border-radius: 8px;
+ 
+}
+
+
+.hide-form{
+    display: none;
+}
+
+.alert-password{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100%;
+    flex-shrink: 1;
+}
+.alert-password h2{
+    display: block;
+    color: red;
+    font-size: 12px;
+    font-weight: 300;
+}
+
