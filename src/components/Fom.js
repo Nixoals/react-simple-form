@@ -14,8 +14,7 @@ const Form = () => {
 
 		if (passwordCheck !== password) {
 			return setAlert('Vos deux mots de pass ne sont pas identiques');
-		}
-
+		} else setAlert('');
 		return setSubmit(true);
 	};
 	return (
@@ -47,6 +46,7 @@ const Form = () => {
 						></input>
 						<label>Password</label>
 						<input
+							className={alert ? 'red-border' : ''}
 							onChange={(elem) => {
 								setPassword(elem.target.value);
 							}}
@@ -56,6 +56,7 @@ const Form = () => {
 						></input>
 						<label>Confirm your password</label>
 						<input
+							className={alert ? 'red-border' : ''}
 							onChange={(elem) => {
 								setPasswordCheck(elem.target.value);
 							}}
@@ -64,7 +65,7 @@ const Form = () => {
 							value={passwordCheck}
 						></input>
 						<div className="alert-password">
-							<h2>{alert}</h2>
+							<h2>{!submit ? alert : ''}</h2>
 						</div>
 						<button type="submit">Register</button>
 					</form>
